@@ -1,0 +1,21 @@
+{
+  "name": "projects.api.music",
+  "version": "0.1.0",
+  "description": "Api de musicas no node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "author": "Mateus Mendes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "debug": "^4.3.3",
+    "express": "^4.17.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

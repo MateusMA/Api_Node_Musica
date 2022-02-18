@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Music = mongoose.model('Music')
 
+<<<<<<< HEAD
 exports.get = (req, res, next) => {
 
 	Music.find({}, 'titulo artista ano album album_foto').then(data => {
@@ -30,7 +31,6 @@ exports.getByTag = (req, res, next) => {
 	})
 
 }
-
 exports.post = (req, res, next) => {
 
 	var musicInst = new Music()
@@ -55,6 +55,7 @@ exports.post = (req, res, next) => {
 
 exports.put = (req, res, next) => {
 
+<<<<<<< HEAD
 	Music.findByIdAndUpdate(req.params._id, {
 		$set: {
 			titulo: req.body.titulo,
@@ -70,11 +71,10 @@ exports.put = (req, res, next) => {
 	}).catch(e => {
 		res.status(400).send(
 			{ message: 'Ops, falha ao atualizar', data: e })
-	})
-
 }
 
 exports.delete = (req, res, next) => {
+<<<<<<< HEAD
 	Music.findOneAndRemove(req.params._id)
 	.then(x => {
 		res.status(200).send(
@@ -84,4 +84,5 @@ exports.delete = (req, res, next) => {
 		res.status(400).send(
 			{ message: 'falha ao deletar', data: e })
 	})
+>>>>>>> 809c66fd89003f1b4d49f4c02c9466d0a2e624ad
 }
